@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --surface-0: 250 249 247;
+  --surface-1: 245 244 240;
+  --surface-2: 240 239 234;
+  --surface-3: 234 232 228;
+  --ink: 28 27 26;
+  --ink-muted: 107 106 104;
+  --ink-faint: 139 137 133;
+  --accent: 28 27 26;
+  --accent-muted: 234 232 228;
+  --border: 234 232 228;
+  --border-strong: 208 205 199;
+}
+
+.dark {
+  --surface-0: 22 21 19;
+  --surface-1: 30 29 26;
+  --surface-2: 40 38 35;
+  --surface-3: 55 52 48;
+  --ink: 234 232 228;
+  --ink-muted: 163 159 152;
+  --ink-faint: 115 112 107;
+  --accent: 234 232 228;
+  --accent-muted: 50 44 37;
+  --border: 45 42 38;
+  --border-strong: 65 62 57;
+}
+
+@layer base {
+  html {
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-surface-0 text-ink font-sans;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  ::selection {
+    background: rgb(234 232 228);
+    color: rgb(28 27 26);
+  }
+
+  .dark ::selection {
+    background: rgb(55 52 48);
+    color: rgb(234 232 228);
+  }
+}
+
+@layer components {
+  .prose-lab h1 {
+    @apply font-display text-4xl md:text-5xl lg:text-[56px] font-normal tracking-tight mb-4;
+    line-height: 1.1;
+  }
+
+  .prose-lab h2 {
+    @apply font-serif text-xl font-semibold tracking-tight mt-14 mb-5 text-ink;
+  }
+
+  .prose-lab h3 {
+    @apply font-serif text-base font-semibold tracking-tight mt-8 mb-3 text-ink;
+  }
+
+  .prose-lab p {
+    @apply text-ink-muted leading-relaxed mb-5;
+    font-size: 1.0625rem;
+    line-height: 1.8;
+    max-width: 68ch;
+  }
+
+  .prose-lab ul {
+    @apply list-disc pl-5 mb-5 space-y-1.5 text-ink-muted;
+  }
+
+  .prose-lab li {
+    @apply leading-relaxed;
+    font-size: 1.0625rem;
+  }
+
+  .prose-lab strong {
+    @apply font-semibold text-ink;
+  }
+
+  .prose-lab blockquote {
+    @apply border-l-2 border-ink pl-6 italic text-ink-muted my-8;
+  }
+
+  .tag-pill {
+    @apply inline-flex items-center px-2.5 py-0.5 text-2xs font-medium rounded-sm
+           bg-transparent text-ink-faint border border-border
+           hover:bg-surface-2 transition-colors cursor-default;
+  }
+
+  .tag-pill-active {
+    @apply bg-surface-3 text-ink border-border-strong;
+  }
+
+  .card {
+    @apply bg-transparent border border-border rounded-xl p-6
+           hover:bg-surface-1 hover:border-border-strong transition-all duration-300;
+  }
+
+  .section-divider {
+    @apply border-t border-border my-14;
+  }
+}
+
+@layer utilities {
+  .fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
