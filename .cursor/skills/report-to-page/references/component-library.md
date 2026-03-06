@@ -23,9 +23,9 @@ export function SkillNamePage() {
         {/* 标签 + 标题 */}
       </header>
 
-      {/* Hook 引言 */}
+      {/* Hook 金句——一句话，硅基视角，不要写成一段叙事 */}
       <div className="text-xl md:text-2xl leading-relaxed font-serif text-ink-muted mb-12 pb-12 border-b border-border">
-        引言文字
+        一句从技术/硅基视角切入的金句，点出文章最核心的张力。
       </div>
 
       {/* 各章节 */}
@@ -164,16 +164,22 @@ interface CodeBlockProps {
 </header>
 ```
 
-## 路由注册
+## 路由与数据注册
 
 文件：`skill-lab/src/App.tsx`
 
 ```tsx
-// 1. 导入
+// skill 类型
 import { NewPage } from './pages/skills/NewPage';
-
-// 2. 在 Routes 中，/skill/:id 之前添加
 <Route path="/skill/new-page" element={<NewPage />} />
+
+// article 类型
+import { NewArticlePage } from './pages/articles/NewArticlePage';
+<Route path="/article/article-slug" element={<NewArticlePage />} />
 ```
 
 具名路由必须在 `:id` 通配路由之前，否则会被通配匹配拦截。
+
+数据注册：
+- skill → `skill-lab/src/data/skills.ts`
+- article → `skill-lab/src/data/articles.ts`
