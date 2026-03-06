@@ -6,21 +6,12 @@ import { SkillPage } from './pages/SkillPage';
 import { PatternsPage } from './pages/PatternsPage';
 import { TutorialPage } from './pages/TutorialPage';
 import { AestheticPage } from './pages/AestheticPage';
+import { ArticlePage } from './pages/ArticlePage';
 import { FrontendDesignPage } from './pages/skills/FrontendDesignPage';
 import { UiUxProMaxPage } from './pages/skills/UiUxProMaxPage';
 import { BaoyuCoverImagePage } from './pages/skills/BaoyuCoverImagePage';
 import { WebDesignGuidelinesPage } from './pages/skills/WebDesignGuidelinesPage';
 import { SkillCreatorPage } from './pages/skills/SkillCreatorPage';
-import { NineObservationsAgentsPage } from './pages/articles/NineObservationsAgentsPage';
-import { WhatAiCannotDoPage } from './pages/articles/WhatAiCannotDoPage';
-import { DanKoeOnePersonBusinessPage } from './pages/articles/DanKoeOnePersonBusinessPage';
-import { ScarceHumanityInAiEraPage } from './pages/articles/ScarceHumanityInAiEraPage';
-import { McpIsDeadLongLiveCliPage } from './pages/articles/McpIsDeadLongLiveCliPage';
-import { SkillCreatorEvalBenchmarkUpgradePage } from './pages/articles/SkillCreatorEvalBenchmarkUpgradePage';
-import { WorldClassAgenticEngineerPage } from './pages/articles/WorldClassAgenticEngineerPage';
-import { ObsidianClaudeCodeVaultPage } from './pages/articles/ObsidianClaudeCodeVaultPage';
-import { ModularizeHabitsWithSkillsPage } from './pages/articles/ModularizeHabitsWithSkillsPage';
-import { CliNativeLanguageOfAiAgentsPage } from './pages/articles/CliNativeLanguageOfAiAgentsPage';
 import { OpenClawPersonalAssistantPage } from './pages/tutorials/OpenClawPersonalAssistantPage';
 import { OpenClawCliOnboardingPage } from './pages/tutorials/OpenClawCliOnboardingPage';
 
@@ -39,16 +30,7 @@ export default function App() {
           <Route path="/skill/baoyu-cover-image" element={<BaoyuCoverImagePage />} />
           <Route path="/skill/web-design-guidelines" element={<WebDesignGuidelinesPage />} />
           <Route path="/skill/skill-creator" element={<SkillCreatorPage />} />
-          <Route path="/article/9-observations-building-ai-agents" element={<NineObservationsAgentsPage />} />
-          <Route path="/article/what-ai-cannot-do" element={<WhatAiCannotDoPage />} />
-          <Route path="/article/dan-koe-one-person-business" element={<DanKoeOnePersonBusinessPage />} />
-          <Route path="/article/scarce-humanity-in-ai-era" element={<ScarceHumanityInAiEraPage />} />
-          <Route path="/article/mcp-is-dead-long-live-cli" element={<McpIsDeadLongLiveCliPage />} />
-          <Route path="/article/skill-creator-eval-benchmark-upgrade" element={<SkillCreatorEvalBenchmarkUpgradePage />} />
-          <Route path="/article/world-class-agentic-engineer" element={<WorldClassAgenticEngineerPage />} />
-          <Route path="/article/obsidian-claude-code-vault-as-ai-context" element={<ObsidianClaudeCodeVaultPage />} />
-          <Route path="/article/modularize-habits-with-skills" element={<ModularizeHabitsWithSkillsPage />} />
-          <Route path="/article/cli-native-language-of-ai-agents" element={<CliNativeLanguageOfAiAgentsPage />} />
+          <Route path="/article/:id" element={<ArticlePage />} />
           <Route path="/tutorial/tut-openclaw/1" element={<OpenClawPersonalAssistantPage />} />
           <Route path="/tutorial/tut-openclaw/2" element={<OpenClawCliOnboardingPage />} />
           <Route path="/skill/:id" element={<SkillPage />} />
