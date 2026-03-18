@@ -6,3 +6,14 @@ dist/
 .env.*
 *.zip
 tsconfig.tsbuildinfo
+
+# 非代码内容
+skills/
+skills-lock.json
+技能分析/
+文章分析/
+模板/
+classes/
+.agents/
+.codebuddy/
+.cursor/

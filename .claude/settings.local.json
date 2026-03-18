@@ -5,7 +5,15 @@
       "Bash(git add:*)",
       "Bash(git commit:*)",
       "Bash(git push)",
-      "Bash(git checkout:*)"
+      "Bash(git checkout:*)",
+      "Bash(cd:*)",
+      "Bash(npm run:*)",
+      "Bash(zip:*)",
+      "Bash(open:*)",
+      "Bash(git init:*)",
+      "Bash(cat:*)",
+      "Bash(git push:*)",
+      "Bash(gh run:*)"
     ]
   }
 }
